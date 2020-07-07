@@ -15,7 +15,7 @@ def make_1080p():
 
 sound = mixer.Sound('alarm4.wav')
 
-face = cv2.CascadeClassifier('haar cascade files\haarcascade_frontalface_default.xml')
+face = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 cap = cv2.VideoCapture(0)   # to capture /read first image of the video ..0 to use the built in camera..
 #make_1080p()
 
@@ -37,7 +37,6 @@ while(True):
         
         if(len(faces)>=1):
             sound.play()
-        #time.sleep(4)
                        
     cv2.imshow('frame',frame)
     key=cv2.waitKey(1) #this will generate a new frame after every millisecond
